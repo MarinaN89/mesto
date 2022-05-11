@@ -1,0 +1,9 @@
+.profile-info{
+    margin-left: -150px;
+}
+@media all and (min-width:320px)and (max-device-width:870px){
+  
+    .profile-info{
+        margin-left: 0;
+        padding-left: 0;
+    }}

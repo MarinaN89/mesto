@@ -1,0 +1,16 @@
+.elements{
+    display: flex;
+    justify-content: center;
+    margin-top: 47px;
+}
+
+.elements div{
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media all and (min-width:320px)and (max-device-width:870px){
+    .elements div{
+        justify-content: center;
+    }}

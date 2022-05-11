@@ -1,0 +1,11 @@
+.form__button-style{
+    font-family: "Inter Regular",arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #000000;
+    margin-top: 4px;
+}

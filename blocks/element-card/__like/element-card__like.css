@@ -1,0 +1,14 @@
+.element-card__like{
+   margin-top: 7px;
+    width: 22px;
+    height: 18px;
+    background-image: url('../../../images/like.png');
+   }
+  
+   .element-card__like:active{
+    background-image: url('../../../images/Union.png');
+    opacity: none;
+   }
+   .element-card__like:hover{
+    opacity: 0.4;
+}
