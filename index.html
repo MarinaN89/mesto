@@ -9,10 +9,8 @@
 <body>
     <div class="page">
        <header class="header">
-           <ul>
-              <li><img class="header__logo" src="images/Vector.svg" alt="Логотип"/></li>
-           </ul>
-           <div class="header__line"></div>
+             <img class="header__logo" src="images/Vector.svg" alt="Логотип"/>
+             <div class="header__line"></div>
        </header> 
 
 
@@ -32,7 +30,7 @@
            <section class="elements">
                <div>
                <ul class="element">
-                   <li><img class="element__img"  src="images/one.png"  alt=""/></li>
+                   <li><img class="element__img"  src="images/one.png"  alt="Карачаевск"/></li>
                    <li>
                        <ul class="element-card" >
                            <li><p class="element-card__title">Карачаевск</p></li>
@@ -41,7 +39,7 @@
                    </li>
                </ul>
                <ul class="element">
-                <li><img class="element__img"  src="images/two.png"  alt=""/></li>
+                <li><img class="element__img"  src="images/two.png"  alt="Домбай"/></li>
                 <li>
                     <ul class="element-card" >
                         <li><p class="element-card__title">Гора Эльбрус</p></li>
@@ -50,7 +48,7 @@
                 </li>
             </ul>
             <ul class="element">
-                <li><img class="element__img"  src="images/three.png"  alt=""/></li>
+                <li><img class="element__img"  src="images/three.png"  alt="Гора Эльбрус"/></li>
                 <li>
                     <ul class="element-card" >
                         <li><p class="element-card__title">Домбай</p></li>
@@ -59,7 +57,7 @@
                 </li>
             </ul>
             <ul class="element">
-                <li><img class="element__img"  src="images/four.png"  alt=""/></li>
+                <li><img class="element__img"  src="images/four.png"  alt="Домбай"/></li>
                 <li>
                     <ul class="element-card" >
                         <li><p class="element-card__title">Гора Эльбрус</p></li>
@@ -68,7 +66,7 @@
                 </li>
             </ul>
             <ul class="element">
-                <li><img class="element__img"  src="images/five.png"  alt=""/></li>
+                <li><img class="element__img"  src="images/five.png"  alt="Гора Эльбрус"/></li>
                 <li>
                     <ul class="element-card" >
                         <li><p class="element-card__title">Домбай</p></li>
@@ -77,7 +75,7 @@
                 </li>
             </ul>
             <ul class="element">
-                <li><img class="element__img"  src="images/six.png"  alt=""/></li>
+                <li><img class="element__img"  src="images/six.png"  alt="Карачаевск"/></li>
                 <li>
                     <ul class="element-card" >
                         <li><p class="element-card__title">Карачаево-Черкессия</p></li>
@@ -95,27 +93,29 @@
        <p class="footer__text">© 2020 Mesto Russia</p>
     </div>
 </footer>
+
+<div class="popup">
+    <img class="popup__close" src="images/Close-Icon.png" alt="кнопка закрытия окна"/>
+    <div class="popup__container">
+       <form class="form">
+            <h2 class="form__heading">Редактировать профиль</h2>
+            <fieldset class="form__item-heading">
+                 <input type="text" class="form__item-heading-style" id="form-heading" name="item-heading" value="Жак-Ив Кусто"> 
+           </fieldset>
+           <fieldset class="form__item-subtitle">
+                 <input type="text" class="form__item-subtitle-style" id="form-subtitle" name="item-subtitle" value="Исследователь океана"> 
+           </fieldset>
+           <fieldset class="form__button">
+                 <input type="submit" class="form__button-style" value="Сохранить"> 
+           </fieldset>
+       </form>
+    </div>
+</div>
     </div>
 
 
-    <div class="popup">
-        <img class="popup__close" src="images/Close-Icon.png" alt="кнопка закрытия окна"/>
-        <div class="popup__container">
-           <form class="form">
-                <h2 class="form__heading">Редактировать профиль</h2>
-                <fieldset class="form__item-heading">
-                     <input type="text" class="form__item-heading-style" id="form-heading" name="item-heading" value="Жак-Ив Кусто"> 
-               </fieldset>
-               <fieldset class="form__item-subtitle">
-                     <input type="text" class="form__item-subtitle-style" id="form-subtitle" name="item-subtitle" value="Исследователь океана"> 
-               </fieldset>
-               <fieldset class="form__button">
-                     <input type="submit" class="form__button-style" value="Сохранить"> 
-               </fieldset>
-           </form>
-        </div>
-    </div>
+   
 
-    <script src="script.js"></script> 
+    <script src="index.js"></script> 
 </body>
 </html>
