@@ -1,0 +1,9 @@
+.profile__content-name{
+  overflow: visible;
+  max-width: 390px;
+}
+@media all and (min-width:320px)and (max-device-width:870px){
+  .profile__content-name{
+    max-width: 280px;
+  }
+  }
