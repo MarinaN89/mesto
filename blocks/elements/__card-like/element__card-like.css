@@ -1,4 +1,4 @@
-.element__card-like{
+.elements__card-like{
    margin-top: 7px;
     width: 22px;
     height: 18px;
@@ -7,10 +7,10 @@
     cursor: pointer;
    }
   
-   .element__card-like:active{
+   .elements__card-like:active{
     background-image: url(../../../images/Union.svg);
     opacity: none;
    }
-   .element__card-like:hover{
+   .elements__card-like:hover{
     opacity: 0.5;
 }

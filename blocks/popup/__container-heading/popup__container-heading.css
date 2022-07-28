@@ -1,4 +1,4 @@
-.popup__container_heading{
+.popup__container-heading{
     margin-top: 34px;
     font-family: 'Inter';
     font-style: normal;
@@ -10,7 +10,7 @@
     margin-left: 36px;
 }
 @media all and (min-width:320px)and (max-device-width:870px){
-    .popup__container_heading{
+    .popup__container-heading{
         font-size: 18px;
         margin-bottom: 0;
         margin-top: 25px;
