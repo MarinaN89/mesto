@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 19" width="22" height="19">
+	<title>Union</title>
+	<defs>
+		<image  width="22" height="19" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAATBAMAAABmV+C7AAAAAXNSR0IB2cksfwAAADBQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWj8cCwAAABB0Uk5TABB/3//vv2DPnyAwj4BAUBr8WoIAAABuSURBVHicY2AQMgkrYGBP9ZjFwMBt4uLiwzDFxcV5AcNiFyCYCSIMQSJQ4MvQAmc7M7ggAEMInOnKkAJnuzE8gbP9GXjh7AsMDFfgRjLAJYDCMAmQMEwCLAyRgAhDJKDCIAmYMEgCLszAcBdMAgCyITCO1gU9tAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+</svg>

@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 19" width="22" height="19">
+	<title>like</title>
+	<defs>
+		<image  width="22" height="19" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAATCAMAAACjpw26AAAAAXNSR0IB2cksfwAAADlQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvHZQPQAAABN0Uk5TABB/3//vv2DPnyAwr4CPkHBAUPT5wz4AAACGSURBVHicbdDhFsIgCAXgO0CcJlm9/8OGbpXp+HXPh0dBABuxBI3wihpkT7nFG4dixnIHkmi1IuyemXvXJCV5tOSy+YmuzSUeKYthTzgrxk8qDO8sZYJQV64Bqiuz4ik0K8mrXUSz2vEAXejk9BttcBoH/jr9r3E6zct1X7T7hfYfvFD3Qd/vZwPA2fyOaAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+</svg>

@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>Edit-Button</title>
+	<defs>
+		<image  width="24" height="24" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAAXNSR0IB2cksfwAAAB5QTFRF////AAAA////////////////////////////////+ZDkTwAAAAp0Uk5T/wAQvzDPf3AggEjPxqEAAABASURBVHicY2BABoyCcCBANY6yI4IjFGCI4KiyKsI5QgFBCD1gCSgHIgHlQCSgnIQghD3inYoIjnAhtb0A4SADAMJHE3+YK/ZkAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+</svg>

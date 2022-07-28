@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28">
+	<title>Close-Icon-svg</title>
+	<defs>
+		<image width="32" height="32" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAAXNSR0IB2cksfwAAABJQTFRFAAAA////////////////////PlKtOgAAAAZ0Uk5TAF+f/6BgbOtHJQAAAJRJREFUeJxV0EEOwjAQA0ATlTuCDxT1BdT0jlRxR4L/vwV1t1s7uW00UdYGrrBzB04cNTdecOOsi4kPrBRp5BMDRSbyBSMBYCSByA5EChQ5QBGBJAaSOAjiIEgHgjiIL2af2/Zk7EFHth28l1jSe8kljeSSIpXiIJWiiGLuRDGTeA9BvIcgX4+5csHZexj4AX4e+40/8XImp2J4Aw4AAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="img1" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>
