@@ -1,5 +1,5 @@
 const formEle = document.querySelector(".popup");
-const title = document.querySelector(".profile__content_name-title");
+const title = document.querySelector(".profile__content-name_title");
 const subTitle = document.querySelector(".profile__content_name-subtitle");
 const showBtn = document.querySelector(".button-open");
 const nameInput = formEle.querySelector("#form-heading");
