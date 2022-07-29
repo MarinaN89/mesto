@@ -1,5 +1,4 @@
 .profile__add-button{
-    margin-top: 30px;
     width: 150px;
     height: 50px;
     background: none;
@@ -15,8 +14,8 @@
 }
 @media all and (min-width:320px)and (max-device-width:870px){
     .profile__add-button{
-        width: 288px;
-        margin-top: 20px;
+        width: 282px;
+        margin-top: 22px;
     }
 }
   

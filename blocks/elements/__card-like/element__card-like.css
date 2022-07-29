@@ -5,6 +5,7 @@
     background-image: url(../../../images/like.svg);
     border: none;
     cursor: pointer;
+    background-color: transparent;
    }
   
    .elements__card-like:active{
