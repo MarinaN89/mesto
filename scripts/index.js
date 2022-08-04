@@ -11,14 +11,14 @@ const popupClose = document.querySelector('.popup__close');
 openButton.addEventListener('click', (e) => {
   profileNameInput.value = title.textContent;
   profileSubTitleInput.value = subTitle.textContent;
-  popupElement.classList.toggle('popup_opened');
+  popupElement.classList.add('popup_opened');
 });
 
 saveButton.addEventListener('click', (e) => {
   e.preventDefault();
   title.textContent = profileNameInput.value;
   subTitle.textContent = profileSubTitleInput.value;
-  popupElement.classList.remove('popup_opened');
+  closePopup();
 });
 
 function closePopup(){

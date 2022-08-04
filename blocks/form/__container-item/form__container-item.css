@@ -2,9 +2,6 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    margin-top: 52px;
-    margin-left: 36px;
-    margin-right: 36px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-family: 'Inter','Arial', sans-serif;
     font-style: normal;
@@ -12,17 +9,17 @@
     font-size: 14px;
     line-height: 17px;
     color: #000000;
-    padding-bottom: 13px;
+    padding-bottom: 7px;
 }
 .form__container-item:nth-child(2){
     margin-top: 32px;
 }
-@media all and (min-width:320px)and (max-device-width:870px){
+@media all and (min-width:320px)and (max-device-width:700px){
     .form__container-item{
-      margin-left: 0;
-      margin-right: 0;
+        padding-bottom: 9px;
     }
     .form__container-item:nth-child(2){
-        margin-top: 30px;
+      margin-top: 30px;
+      padding-bottom: 9px;
     }
 }

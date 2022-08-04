@@ -1,8 +1,8 @@
 .popup__close{
     position: absolute;
     border-bottom: 150px;
-    top: -35px;
-    right:-35px;
+    top: -40px;
+    right:-40px;
     height: 32px;
     width: 32px;
     background: none;
@@ -21,5 +21,7 @@
        right:0;
        height: 20px;
        background-size: 100%;
+       padding: 0;
+       top: -38px;
      }
 }

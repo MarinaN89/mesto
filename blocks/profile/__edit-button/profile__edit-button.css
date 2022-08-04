@@ -3,10 +3,10 @@
     border: 1px solid #fff;
     width: 24px;
     height: 24px;
-    margin-left:18px;
+    margin-left:9px;
     cursor: pointer;
     background-image: url(../../../images/Edit-Button.svg);
-    margin-bottom: 18px;
+    margin-bottom: 22px;
 }
 
 .profile__edit-button:hover{
