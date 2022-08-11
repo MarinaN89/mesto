@@ -75,7 +75,7 @@ const elementsTemplate = document.querySelector('#elements-template').content;
  
 
 initialCards.forEach(function (element) {
-  const cardElementClone = directorTemplate.cloneNode(true);
+  const cardElementClone = elementsTemplate.cloneNode(true);
 
   cardElementClone.querySelector('.elements__card-title').textContent = element.name;
   cardElementClone.querySelector('.elements__card-img').href = element.link;
@@ -83,6 +83,7 @@ initialCards.forEach(function (element) {
   initialCards.append(cardElementClone)
 })
 
+console.log(initialCards)
   
 
 
