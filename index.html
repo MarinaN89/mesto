@@ -27,48 +27,15 @@
            </section>
 
            <section class="elements">
-               <article class="elements__card">
+            <template id="elements-template">
+               <div class="elements__card">
                     <img class="elements__card-img"  src="images/one.png"  alt="Карачаевск"/>
                     <div class="elements__card-content" >
                         <h2 class="elements__card-title">Карачаевск</h2>
                         <button class="elements__card-like" type="button"></button>
                      </div>
-               </article>
-               <article class="elements__card">
-                    <img class="elements__card-img"  src="images/two.png"  alt="Домбай"/>
-                    <div class="elements__card-content" >
-                        <h2 class="elements__card-title">Гора Эльбрус</h2>
-                        <button class="elements__card-like" type="button"></button>
-                    </div>
-            </article>
-            <article class="elements__card">
-                   <img class="elements__card-img"  src="images/three.png"  alt="Гора Эльбрус"/>
-                   <div class="elements__card-content" >
-                        <h2 class="elements__card-title">Домбай</h2>
-                        <button class="elements__card-like" type="button"></button>
-                   </div>
-            </article>
-            <article class="elements__card">
-                   <img class="elements__card-img"  src="images/four.png"  alt="Домбай"/>
-                   <div class="elements__card-content" >
-                        <h2 class="elements__card-title">Гора Эльбрус</h2>
-                        <button class="elements__card-like" type="button"></button>
-                   </div>
-            </article>
-            <article class="elements__card">
-                   <img class="elements__card-img"  src="images/five.png"  alt="Гора Эльбрус"/>
-                   <div class="elements__card-content" >
-                        <h2 class="elements__card-title">Домбай</h2>
-                        <button class="elements__card-like" type="button"></button>
-                   </div>
-            </article>
-            <article class="elements__card">
-                   <img class="elements__card-img"  src="images/six.png"  alt="Карачаевск"/>
-                   <div class="elements__card-content" >
-                        <h2 class="elements__card-title">Карачаево-Черкессия</h2>
-                        <button class="elements__card-like" type="button"></button>
-                   </div>
-            </article>
+               </div>
+            </template>   
            </section>
        </main>
 
@@ -88,6 +55,19 @@
             <fieldset class="form__container">
                  <input type="text" class="form__container-item" id="form-heading" name="item-heading"> 
                  <input type="text" class="form__container-item" id="form-subtitle" name="item-subtitle"> 
+                 <input type="submit" class="form__container-button" value="Сохранить"> 
+           </fieldset>
+       </form>
+    </div>
+</div>
+<div class="popup-add">
+    <div class="popup-add__container">
+       <button class="popup-add__close" type="button"></button>
+       <h2 class="popup__container-heading">Новое место</h2>
+       <form class="form" name="form">
+            <fieldset class="form__container">
+                 <input type="text" class="form-add__container-item" id="form-heading" name="item-heading" placeholder="Название"> 
+                 <input type="text" class="form-add__container-item" id="form-subtitle" name="item-subtitle" placeholder="Ссылка на картинку"> 
                  <input type="submit" class="form__container-button" value="Сохранить"> 
            </fieldset>
        </form>
