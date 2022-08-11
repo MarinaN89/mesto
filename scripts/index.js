@@ -43,8 +43,13 @@ popupCloseAdd.addEventListener('click', closePopupAdd);
 
 
 // добавление карточек 
+const elementsSection = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements-template').content; 
-const cardElementClone = userTemplate.querySelector('.elements__card').cloneNode(true);
+const cardElementClone = elementsTemplate.querySelector('.elements__card').cloneNode(true);
+
+cardElementClone.querySelector('.elements__card-img').src = 'https://bigpicture.ru/wp-content/uploads/2018/06/750608b3-1274-4fff-8766-8b0a8995ee43_850.jpg';
+cardElementClone.querySelector('.elements__card-title').textContent = 'Дюк Корморант';
+elementsSection.append(cardElementClone); 
 
   const initialCards = [
     {
@@ -73,5 +78,5 @@ const cardElementClone = userTemplate.querySelector('.elements__card').cloneNode
     }
   ];
 
-
+console.log(cardElementClone)
 
