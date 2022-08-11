@@ -78,9 +78,9 @@ initialCards.forEach(function (element) {
   const cardElementClone = elementsTemplate.cloneNode(true);
 
   cardElementClone.querySelector('.elements__card-title').textContent = element.name;
-  cardElementClone.querySelector('.elements__card-img').href = element.link;
+  cardElementClone.querySelector('.elements__card-img').src = element.link;
 
-  initialCards.append(cardElementClone)
+  сardSection.append(cardElementClone)
 })
 
 console.log(initialCards)
