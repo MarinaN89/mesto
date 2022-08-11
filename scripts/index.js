@@ -43,40 +43,47 @@ popupCloseAdd.addEventListener('click', closePopupAdd);
 
 
 // добавление карточек 
-const elementsSection = document.querySelector('.elements');
-const elementsTemplate = document.querySelector('#elements-template').content; 
-const cardElementClone = elementsTemplate.querySelector('.elements__card').cloneNode(true);
+const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];
 
-cardElementClone.querySelector('.elements__card-img').src = 'https://bigpicture.ru/wp-content/uploads/2018/06/750608b3-1274-4fff-8766-8b0a8995ee43_850.jpg';
-cardElementClone.querySelector('.elements__card-title').textContent = 'Дюк Корморант';
-elementsSection.append(cardElementClone); 
+const сardSection = document.querySelector('.elements');
+const elementsTemplate = document.querySelector('#elements-template').content;
+ 
 
-  const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-  ];
+initialCards.forEach(function (element) {
+  const cardElementClone = directorTemplate.cloneNode(true);
 
-console.log(cardElementClone)
+  cardElementClone.querySelector('.elements__card-title').textContent = element.name;
+  cardElementClone.querySelector('.elements__card-img').href = element.link;
+
+  initialCards.append(cardElementClone)
+})
+
+  
+
+
 
