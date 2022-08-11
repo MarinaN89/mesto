@@ -26,7 +26,9 @@ function closePopup(){
 }
 popupClose.addEventListener('click', closePopup);
 
-//окно открытия и закрытия(добавление карточек)
+
+
+//форма открытия нажатием на кнопку «+» и закрытия кликом на крестик:
 const popupElementAdd = document.querySelector('.popup-add');
 const openButtonAdd = document.querySelector('.profile__add-button');
 const popupCloseAdd = document.querySelector('.popup-add__close');
@@ -42,7 +44,7 @@ popupCloseAdd.addEventListener('click', closePopupAdd);
 
 
 
-// добавление карточек 
+// появление картоек при загрузке страницы - Шесть карточек «из коробки»
 const initialCards = [
   {
     name: 'Архыз',
@@ -73,17 +75,14 @@ const initialCards = [
 const сardSection = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements-template').content;
  
-
 initialCards.forEach(function (element) {
   const cardElementClone = elementsTemplate.cloneNode(true);
-
   cardElementClone.querySelector('.elements__card-title').textContent = element.name;
   cardElementClone.querySelector('.elements__card-img').src = element.link;
-
   сardSection.append(cardElementClone)
 })
 
-console.log(initialCards)
+//  возможность добавлять пользователю карточки
   
 
 
