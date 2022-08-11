@@ -35,21 +35,27 @@ openButtonAdd.addEventListener('click', (e) => {
   popupElementAdd.classList.add('popup_opened');
 });
 
-function closePopupAdd(){
+function closePopupAdd(){// мне кажется что эта функция очень похожа на функцию closePopup, кажется что их можно объеденить например передавая popup как аргумент функции
   popupElementAdd.classList.remove('popup_opened');
 }
 popupCloseAdd.addEventListener('click', closePopupAdd);
 
 
 
-// добавление карточек 
-const elementsSection = document.querySelector('.elements');
-const elementsTemplate = document.querySelector('#elements-template').content; 
-const cardElementClone = elementsTemplate.querySelector('.elements__card').cloneNode(true);
+// добавление карточек
+// начало неплохое но не забывай, тебе требуется создать функцию для создания карточек а значит:
+function createCard(item) { // нужно создать функцию
+  const elementsTemplate = document.querySelector('#elements-template').content; 
+  // что такое userTemplate? 
+  const cardElementClone = userTemplate.querySelector('.elements__card').cloneNode(true);
+  cardElementClone.querySelector('.elements__card-img').src = item.link; // функция - абстракция, значит мы используем данные данные нам в массиве
+  cardElementClone.querySelector('.elements__card-title').textContent = item.name; // тут тоже самое, работаем с абстракцией и предполагаемым массивом
+  // что такое elementsSection?
+  elementsSection.append(cardElementClone); 
+}
 
-cardElementClone.querySelector('.elements__card-img').src = 'https://bigpicture.ru/wp-content/uploads/2018/06/750608b3-1274-4fff-8766-8b0a8995ee43_850.jpg';
-cardElementClone.querySelector('.elements__card-title').textContent = 'Дюк Корморант';
-elementsSection.append(cardElementClone); 
+initialCards.forEach(createCard(e)) // что то типа этого
+
 
   const initialCards = [
     {
