@@ -38,7 +38,7 @@ openButtonAdd.addEventListener('click', (e) => {
   popupElementAdd.classList.add('popup_opened');
 });
 
- function closePopupAdd(){
+ function closePopupAdd(){ // объеденить функции закрытия
    popupElementAdd.classList.remove('popup_opened');
 }
  popupCloseAdd.addEventListener('click', closePopupAdd);
@@ -77,6 +77,8 @@ const сardSection = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements-template').content;
  
 initialCards.forEach(function (element) {
+  // все что ниже вынести в отдельную функцию и уже эту функцию вызывать внутри forEach
+  // точно такая же функция будет использовать при создании одной карточки
   const cardElementClone = elementsTemplate.cloneNode(true);
   cardElementClone.querySelector('.elements__card-title').textContent = element.name;
   cardElementClone.querySelector('.elements__card-img').src = element.link;
