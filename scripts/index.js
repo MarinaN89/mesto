@@ -33,14 +33,15 @@ const popupElementAdd = document.querySelector('.popup-add');
 const openButtonAdd = document.querySelector('.profile__add-button');
 const popupCloseAdd = document.querySelector('.popup-add__close');
 
+
 openButtonAdd.addEventListener('click', (e) => {
   popupElementAdd.classList.add('popup_opened');
 });
 
-function closePopupAdd(){
-  popupElementAdd.classList.remove('popup_opened');
+ function closePopupAdd(){
+   popupElementAdd.classList.remove('popup_opened');
 }
-popupCloseAdd.addEventListener('click', closePopupAdd);
+ popupCloseAdd.addEventListener('click', closePopupAdd);
 
 
 
@@ -81,9 +82,6 @@ initialCards.forEach(function (element) {
   cardElementClone.querySelector('.elements__card-img').src = element.link;
   сardSection.append(cardElementClone)
 })
-
-//  возможность добавлять пользователю карточки
-  
 
 
 

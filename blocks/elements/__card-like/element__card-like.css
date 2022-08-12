@@ -8,10 +8,6 @@
     background-color: transparent;
    }
   
-   .elements__card-like:active{
-    background-image: url(../../../images/Union.svg);
-    opacity: none;
-   }
    .elements__card-like:hover{
     opacity: 0.5;
 }
