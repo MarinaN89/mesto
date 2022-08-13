@@ -38,7 +38,7 @@ openButtonAdd.addEventListener('click', (e) => {
   popupElementAdd.classList.add('popup_opened');
 });
 
- function closePopupAdd(){
+ function closePopupAdd(){  // все еще наставиваю на том что бы объеденить в одну функцию с closePopup
    popupElementAdd.classList.remove('popup_opened');
 }
  popupCloseAdd.addEventListener('click', closePopupAdd);
@@ -76,31 +76,41 @@ const initialCards = [
 const сardSection = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements-template').content;
 const buttonAddSubmit = document.querySelector('.form-add__container-button');
-
-buttonAddSubmit.addEventListener('click', (e) => {
-  e.preventDefault();
- 
-  closePopupAdd();
-});
-
- 
-initialCards.forEach(function (element) {
-  function loadingCard(){
+const formAddCard = document.forms.formAddCard;
+// создаем функцию раньше чем будем ее использовать
+function createCard(element){ //функция должна лежать снаружи метода, а вызвываться внутри метода иначе ты ее нигде кроме этого самого метода не сможешь использовать
   const cardElementClone = elementsTemplate.cloneNode(true);
+  const buttonLike = cardElementClone.querySelector('.elements__card-like'); // кнопку лайка мы ищем внутри каждой карточки отдельно, иначе они у нас будут срабатывать все вместе, ведь на каждой карточке есть лайк
   cardElementClone.querySelector('.elements__card-title').textContent = element.name;
   cardElementClone.querySelector('.elements__card-img').src = element.link;
   сardSection.append(cardElementClone)
+
+  
+  buttonLike.addEventListener('click', function (evt) {
+    evt.target.classList.toggle('elements__card-like_active'); // не отображается потому что у тебя в css не прописан такой класс
+  });
   }
-  loadingCard();
+
+  formAddCard.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // понимаю что решение довольно мудреное, но если разберешься как робтает будет круто
+  // в противном случае разнеси на две разные функции, я посмотрел реализации у ребят, ревью  должно пройти в этом случае
+  const form = e.currentTarget;
+  const data = new FormData(form);
+  const element = {};
+  data.forEach((value, key) => element[key] = value);
+
+  createCard(element)
+
+  closePopupAdd();
+});
+
+
+initialCards.forEach(function(element) {
+  createCard(element);
 })
 
 
-//лайк
-const buttonLike = document.querySelector('.elements__card-like');
-const elementsCard = document.querySelector('.elements__card');
 
-buttonLike.addEventListener('click', function (evt) {
-  evt.target.classList.toggle('elements__card-like_active');
-});
 
 
