@@ -58,9 +58,9 @@
 .form-add__container-item:nth-child(2){
     margin-top: 32px;
 }
-.elements__like_active {
+.elements__card-like_active {
     opacity: 1;
-    background: url(../../images/Union.svg) center no-repeat;
+   border: 1px solid #000000;
   }
   .form-add__container-button{
     border: none;

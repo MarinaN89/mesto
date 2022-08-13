@@ -72,16 +72,35 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 const сardSection = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements-template').content;
+const buttonAddSubmit = document.querySelector('.form-add__container-button');
+
+buttonAddSubmit.addEventListener('click', (e) => {
+  e.preventDefault();
+ 
+  closePopupAdd();
+});
+
  
 initialCards.forEach(function (element) {
+  function loadingCard(){
   const cardElementClone = elementsTemplate.cloneNode(true);
   cardElementClone.querySelector('.elements__card-title').textContent = element.name;
   cardElementClone.querySelector('.elements__card-img').src = element.link;
   сardSection.append(cardElementClone)
+  }
+  loadingCard();
 })
 
+
+//лайк
+const buttonLike = document.querySelector('.elements__card-like');
+const elementsCard = document.querySelector('.elements__card');
+
+buttonLike.addEventListener('click', function (evt) {
+  evt.target.classList.toggle('elements__card-like_active');
+});
 
 
