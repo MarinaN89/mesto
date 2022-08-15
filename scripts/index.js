@@ -7,6 +7,9 @@ const profileSubTitleInput = popupElement.querySelector('#form-subtitle');
 const saveButton = popupElement.querySelector('.form__container-button');
 const popupClose = document.querySelector('.popup__close');
 
+const formAddCard = document.forms.formAddCard;
+
+
 //открытие и закрытие попапа запись данных с профиля отправка изменений и сохранение
 openButton.addEventListener('click', (e) => {
   profileNameInput.value = title.textContent;
@@ -14,17 +17,24 @@ openButton.addEventListener('click', (e) => {
   popupElement.classList.add('popup_opened');
 });
 
+function closeAllPopup(popup) {
+  console.log(popup);
+  popup.classList.remove('popup_opened');
+}
+
 saveButton.addEventListener('click', (e) => {
   e.preventDefault();
   title.textContent = profileNameInput.value;
   subTitle.textContent = profileSubTitleInput.value;
-  closePopup();
+  closeAllPopup(popupElement);
 });
 
 function closePopup(){
   popupElement.classList.remove('popup_opened');
 }
 popupClose.addEventListener('click', closePopup);
+
+
 
 
 
@@ -49,7 +59,7 @@ openButtonAdd.addEventListener('click', (e) => {
 const initialCards = [
   {
     name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
   },
   {
     name: 'Челябинская область',
@@ -77,30 +87,47 @@ const сardSection = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements-template').content;
 const buttonAddSubmit = document.querySelector('.form-add__container-button');
 
-buttonAddSubmit.addEventListener('click', (e) => {
-  e.preventDefault();
- 
-  closePopupAdd();
-});
-
- 
-initialCards.forEach(function (element) {
-  function loadingCard(){
+function loadingCard(element, order=true){
   const cardElementClone = elementsTemplate.cloneNode(true);
-  cardElementClone.querySelector('.elements__card-title').textContent = element.name;
-  cardElementClone.querySelector('.elements__card-img').src = element.link;
-  сardSection.append(cardElementClone)
-  }
-  loadingCard();
+  const card = cardElementClone.querySelector('.elements__card');
+  const cardImage = card.querySelector('.elements__card-img')
+  card.querySelector('.elements__card-title').textContent = element.name;
+  cardImage.src = element.link;
+  
+  const buttonLike = card.querySelector('.elements__card-like');
+  buttonLike.addEventListener('click', function (evt) {
+    evt.target.classList.toggle('elements__card-like_active')
+  });
+
+  const buttonDelete = card.querySelector('.elements__card-delete');
+  buttonDelete.addEventListener('click', function(evt) {
+    card.remove();
+  })
+
+  cardImage.addEventListener('click', function(evt) {
+    // открыть попап openPopup(evt.target.src)
+    console.log(evt.target.alt);
+  })
+  // порядок если true порядок прямой, если false то порядок обратный 
+  // 1 > 4 ? a = a + 1 : a = a - 1 
+  order ? сardSection.append(cardElementClone) : сardSection.prepend(cardElementClone)
+}
+
+initialCards.forEach(function (element) {
+  loadingCard(element);
 })
 
 
-//лайк
-const buttonLike = document.querySelector('.elements__card-like');
-const elementsCard = document.querySelector('.elements__card');
 
-buttonLike.addEventListener('click', function (evt) {
-  evt.target.classList.toggle('elements__card-like_active');
+formAddCard.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // понимаю что решение довольно мудреное, но если разберешься как робтает будет круто
+  // в противном случае разнеси на две разные функции, я посмотрел реализации у ребят, ревью  должно пройти в этом случае
+  const form = e.target; // получаем форму
+  const data = new FormData(form); // получаем данные из формы
+  const element = {}; // создаем пустой объект 
+  data.forEach((value, key) => element[key] = value); // перекладываем данные из формы в объект
+
+  loadingCard(element, false)
+  closeAllPopup(popupElementAdd)
 });
-
-
