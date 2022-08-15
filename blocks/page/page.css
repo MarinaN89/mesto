@@ -58,11 +58,11 @@
 .form-add__container-item:nth-child(2){
     margin-top: 32px;
 }
-.elements__card-like_active {
-    opacity: 1;
-   border: 1px solid #000000;
-  }
-  .form-add__container-button{
+
+.form-add__container-item:focus-visible {
+    outline: none;
+}
+.form-add__container-button{
     border: none;
     background: #000000;
     color: #fff;
