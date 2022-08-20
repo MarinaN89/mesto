@@ -18,6 +18,8 @@
     align-items: center;
     width: 100%;
     visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
 }
 .popup-add__container{
     width: 430px;
@@ -52,17 +54,18 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #C4C4C4;
+    color: #000000;
     padding-bottom: 7px;
 }
+
 .form-add__container-item:nth-child(2){
     margin-top: 32px;
 }
-.elements__card-like_active {
-    opacity: 1;
-   border: 1px solid #000000;
-  }
-  .form-add__container-button{
+
+.form-add__container-item:focus-visible {
+    outline: 2px solid rgb(0, 157, 255);
+}
+.form-add__container-button{
     border: none;
     background: #000000;
     color: #fff;

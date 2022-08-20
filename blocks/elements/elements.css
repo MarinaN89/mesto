@@ -1,16 +1,23 @@
 .elements{
-    display: flex;
+    display: grid;
     padding-top: 27px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns:  299px 299px 282px;
+  
     margin: 0 auto;
     max-width: 880px;
+    
 }
 
-
-@media all and (min-width:320px)and (max-device-width:870px){
+@media all and (min-width:620px)and (max-device-width:890px){
     .elements{
-        justify-content: center;
+        grid-template-columns:  1fr 1fr;
+        max-width:600px;
         padding-top: 16px;
+    }
+}
+@media all and (min-width:320px)and (max-device-width:620px){
+    .elements{
+        grid-template-columns:  1fr ;
+        max-width: 290px;
     }
 }
