@@ -9,6 +9,12 @@ const popupClose = document.querySelector('.popup__close');
 
 const formAddCard = document.forms.formAddCard;
 
+// Нашли новый попап и его составляющие 
+const popupImg = document.querySelector('.popup-img__container');
+// ищем дочерние элементы внутри родительского
+const popupImgClose = popupImg.querySelector('.popup-img__close')
+const img = popupImg.querySelector('.popup__img__img');
+
 
 //открытие и закрытие попапа запись данных с профиля отправка изменений и сохранение
 openButton.addEventListener('click', (e) => {
@@ -87,6 +93,9 @@ const сardSection = document.querySelector('.elements');
 const elementsTemplate = document.querySelector('#elements-template').content;
 const buttonAddSubmit = document.querySelector('.form-add__container-button');
 
+// вешаем слушатель на кнопку закрытия попапа
+popupImgClose.addEventListener('click', () => closeAllPopup(popupImg))
+
 function loadingCard(element, order=true){
   const cardElementClone = elementsTemplate.cloneNode(true);
   const card = cardElementClone.querySelector('.elements__card');
@@ -104,10 +113,17 @@ function loadingCard(element, order=true){
     card.remove();
   })
 
-  cardImage.addEventListener('click', function(evt) {
-    // открыть попап openPopup(evt.target.src)
-    console.log(evt.target.alt);
-  })
+// внутри создания карточки вешаем слушатель на открытие попапа с изображением
+cardImage.addEventListener('click', function(evt) {
+
+  // добавляем тегу img ссылку на изображение
+  img.src = evt.target.src
+
+  // по аналогии с предыдущими классами открываем попап
+  popupImg.classList.add('popup_opened')
+})
+
+
   // порядок если true порядок прямой, если false то порядок обратный 
   // 1 > 4 ? a = a + 1 : a = a - 1 
   order ? сardSection.append(cardElementClone) : сardSection.prepend(cardElementClone)
