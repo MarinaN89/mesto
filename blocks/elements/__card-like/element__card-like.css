@@ -1,14 +1,15 @@
+
 .elements__card-like{
-   margin-top: 7px;
+    margin-top: 7px;
     width: 22px;
     height: 18px;
     background-image: url(../../../images/like.svg);
     border: none;
     cursor: pointer;
     background-color: transparent;
-   }
-  
-   .elements__card-like:hover{
+}
+
+.elements__card-like:hover{
     opacity: 0.5;
 }
 .elements__card-like_active {
