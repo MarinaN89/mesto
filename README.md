@@ -2,7 +2,7 @@
 
 **Ссылка на сайт**
 
-https://marinan89.github.io/treme/
+[https://marinan89.github.io/treme/](https://marinan89.github.io/mesto/)
 
 **Применение технологии**
  JS (открытие и закрытие формы ,заполнение и изменение заголовков через форму)
